@@ -1,0 +1,97 @@
+/* for win8 mobile */
+@charset "UTF-8";
+@-ms-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+/* vars */
+$txtColor: #4b4b4b;
+$linkColor: #0074BE;
+$bodyFont: "Trebuchet MS", Arial, Helvetica, sans-serif;
+$baseFontSize: 16;
+
+/* mixins */
+@mixin rem-font-size($sizeValue: 1){
+  font-size: ($sizeValue / $baseFontSize) + px;
+  font-size: $sizeValue + rem;
+}
+@mixin image-2x($image, $width, $height) {
+  /* 2 dpr */
+   @media (-webkit-min-device-pixel-ratio: 2), 
+          (min-resolution: 192dpi) { 
+    background-image: url($image);
+    background-size: $width $height;
+  }
+  /* 1.5 dpr */
+  @media 
+  (-webkit-min-device-pixel-ratio: 1.5), 
+  (min-resolution: 144dpi) { 
+      background-image: url($image);
+    background-size: $width $height;
+  }
+}
+// div.logo {
+  // background: url("logo.png") no-repeat;
+  // @include image-2x("logo2x.png", 100px, 25px);
+// }
+
+/* typography */
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: $bodyFont;
+    font-size: 100%;
+    background: #eee url("images/bg.png") repeat;
+    color: $txtColor;
+}
+a {
+    color: $linkColor;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+    img {
+        border: 0;
+    }
+}
+
+/* responsiveness */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+.video embed,
+.video object,
+.video iframe {
+  width: 100%;
+  height: auto;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* reusable classes */
+
+.clear {
+    clear: both;
+}
+.clear:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.hide {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}

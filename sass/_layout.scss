@@ -1,0 +1,74 @@
+/* default = large screen */
+.page {
+    width: (1024 / $baseFontSize) + em;
+    margin: 0 auto 2em;
+    background-color:#FFF;
+    box-shadow: 0 0 .5em rgba(150, 150, 150, 0.4);
+}
+.main-content {
+    width: 54%;
+    float:left;
+    padding: 0 4%;
+}
+.side-content {
+    width: 34%;
+    float:right;
+    padding: 0 2%;
+}
+
+/**************** NON RETINA ****************************/
+/* large and normal screen */
+@media only screen and (min-width: 64.625em) {
+
+  /* like default */
+
+}
+
+/* medium screen */
+@media only screen and (min-width : 43.75em) and (max-width : 64.625em) {
+    .page {
+        width: 100%;
+    }
+    .side-content {
+        width: 30%;
+        padding: 0 1%;
+    }
+    .main-content {
+        width: 64%;
+        padding: 0 2%;
+    }
+
+}
+
+/* small screen */
+@media only screen and (max-width: 43.75em) {
+    .page {
+        width: 100%;
+        min-width: 18.75em;
+        overflow:hidden;
+    }
+    .main-content, .side-content {
+        width: 96%;
+        padding: 0 2%;
+        float:none;
+    }}
+
+/******************** RETINA **************************/
+/* large and normal screen */
+@media only screen and (min-width: 2068px) and (-webkit-min-device-pixel-ratio: 1.5), 
+       only screen and (min-width: 2068px) and (min-resolution: 144dpi) {
+         
+       }
+/* medium screen */
+@media only screen and (min-width: 1400px) and (max-width : 2067px) and (-webkit-min-device-pixel-ratio: 1.5), 
+       only screen and (min-width: 1400px) and (max-width : 2067px) and (min-resolution: 144dpi) {
+
+
+}
+
+/* small screen */
+@media only screen and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), 
+       only screen and (max-width: 1199px) and (min-resolution: 144dpi) {
+
+
+}       

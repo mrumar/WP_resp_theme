@@ -1,0 +1,211 @@
+/*
+ Theme Name: VA responsive based on: BlueGrey
+ Theme URI: http://www.skinpress.com/
+ Description: Custom blog design starts from just $500 @ <a href="http://www.askgraphics.com/blog-design.html">AskGraphics.com</a>.
+ Version: 1.0
+ Author: AskGraphics.com
+ Author URI: http://www.AskGraphics.com/
+
+ License Information :
+
+ All templates are free to use as long as you leave the credits unchanged.
+ You cannot claim these templates or modifications of these templates as yours.
+
+ You cannot redistribute these templates on your website.
+
+ You cannot modify these templates and distribute them.
+ */
+/* reset styles */
+ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fieldset, input {
+  margin: 0;
+  padding: 0; }
+
+h3 {
+  width: 100%;
+  clear: both; }
+
+ul {
+  list-style: none; }
+
+/* for win8 mobile */
+@-ms-viewport {
+  width: device-width; }
+
+@viewport {
+  width: device-width; }
+
+/* vars */
+/* mixins */
+/* typography */
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  background: #eeeeee url("images/bg.png") repeat;
+  color: #4b4b4b; }
+
+a {
+  color: #0074be;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+  a img {
+    border: 0; }
+
+/* responsiveness */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+.video embed,
+.video object,
+.video iframe {
+  width: 100%;
+  height: auto; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+/* reusable classes */
+.clear {
+  clear: both; }
+
+.clear:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.hide {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/* default = large screen */
+.page {
+  width: 64em;
+  margin: 0 auto 2em;
+  background-color: #FFF;
+  box-shadow: 0 0 0.5em rgba(150, 150, 150, 0.4); }
+
+.main-content {
+  width: 54%;
+  float: left;
+  padding: 0 4%; }
+
+.side-content {
+  width: 34%;
+  float: right;
+  padding: 0 2%; }
+
+/**************** NON RETINA ****************************/
+/* large and normal screen */
+@media only screen and (min-width: 64.625em) {
+  /* like default */ }
+/* medium screen */
+@media only screen and (min-width: 43.75em) and (max-width: 64.625em) {
+  .page {
+    width: 100%; }
+
+  .side-content {
+    width: 30%;
+    padding: 0 1%; }
+
+  .main-content {
+    width: 64%;
+    padding: 0 2%; } }
+/* small screen */
+@media only screen and (max-width: 43.75em) {
+  .page {
+    width: 100%;
+    min-width: 18.75em;
+    overflow: hidden; }
+
+  .main-content, .side-content {
+    width: 96%;
+    padding: 0 2%;
+    float: none; } }
+/******************** RETINA **************************/
+/* large and normal screen */
+/* medium screen */
+/* small screen */
+.main-header {
+  width: 100%;
+  border-bottom: 3px solid #565656;
+  margin-bottom: 2em; }
+
+.main-menu li {
+  float: left; }
+
+/* main menu on small devices */
+@media only screen and (max-width: 43.75em) {
+  .main-menu li {
+    float: none;
+    display: block; }
+
+  .js .main-menu {
+    position: absolute;
+    left: -70%;
+    background-color: lime;
+    width: 70%;
+    height: 100%;
+    top: 0; }
+
+  .js .inner-wrap {
+    -webkit-transition: left 500ms ease-out;
+    -moz-transition: left 500ms ease-out;
+    -o-transition: left 500ms ease-out;
+    transition: left 500ms ease-out; }
+
+  .is-nav .inner-wrap {
+    position: relative;
+    left: 70%; }
+
+  /* for 3d transform support: */
+  .transforms3d .main-menu {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    -o-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    left: 0;
+    overflow: hidden; }
+
+  .transforms3d .inner-wrap {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 500ms ease-out;
+    -moz-transition: -moz-transform 500ms ease-out;
+    -o-transition: -o-transform 500ms ease-out;
+    transition: transform 500ms ease-out; }
+
+  .transforms3d.is-nav .inner-wrap {
+    -webkit-transform: translate3d(70%, 0, 0) scale3d(1, 1, 1);
+    -moz-transform: translate3d(70%, 0, 0) scale3d(1, 1, 1);
+    -ms-transform: translate3d(70%, 0, 0) scale3d(1, 1, 1);
+    -o-transform: translate3d(70%, 0, 0) scale3d(1, 1, 1);
+    transform: translate3d(70%, 0, 0) scale3d(1, 1, 1);
+    left: 0; }
+
+  .transforms3d .main-menu .list {
+    -webkit-transform: translate3d(70%, 0, 0) scale3d(0.9, 0.9, 0.9);
+    -webkit-transition: -webkit-transform 500ms ease-out;
+    -webkit-transform-origin: 50% 0; }
+
+  .transforms3d.is-nav .main-menu .list {
+    -webkit-transform: translate3d(0, 0, 0); } }
+/* fb box */
+#fb-box {
+  overflow: hidden; }
+
+.is-nav .main-content {
+  background-color: salmon; }

@@ -9,7 +9,7 @@
                     <div>
                     	<span>Szukaj :</span>
                         <input type="text" value="<?php the_search_query(); ?>" name="s" id="searchform_top_text" />
-                        <input type="image" src="<?php bloginfo('template_url')?>/images/searchbtn.gif" id="gosearch" />
+                        <input type="submit" value="szukaj" id="gosearch" />
                     </div>
                 </form>
             </div>
@@ -93,9 +93,7 @@
 </div> <!-- end of div.inner-wrap -->
 </div> <!-- end of div.page -->
 
-
-
-		<?php wp_footer(); ?>
+    <?php wp_footer(); ?>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/jquery-1.9.0.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/va.js"></script>
     <script type="text/javascript">

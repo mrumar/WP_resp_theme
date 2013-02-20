@@ -9,9 +9,10 @@
 }
 
 /* vars */
-$txtColor: #4b4b4b;
-$linkColor: #0074BE;
-$bodyFont: "Trebuchet MS", Arial, Helvetica, sans-serif;
+$txtColor: #6B6B5B;
+$linkColor: #368AAD;
+$bodyFont: 'PT Sans', Tahoma, sans-serif;
+$headingFont: 'Oranienbaum', serif;
 $baseFontSize: 16;
 
 /* mixins */
@@ -37,7 +38,8 @@ $baseFontSize: 16;
 // div.logo {
   // background: url("logo.png") no-repeat;
   // @include image-2x("logo2x.png", 100px, 25px);
-// }
+// }
+
 
 /* typography */
 body {
@@ -45,7 +47,7 @@ body {
     padding: 0px;
     font-family: $bodyFont;
     font-size: 100%;
-    background: #eee url("images/bg.png") repeat;
+    background: #eee url("images/bg2m.jpg") repeat;
     color: $txtColor;
 }
 a {

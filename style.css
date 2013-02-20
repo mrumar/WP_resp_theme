@@ -1,19 +1,10 @@
+@charset "UTF-8";
 /*
- Theme Name: VA responsive based on: BlueGrey
- Theme URI: http://www.skinpress.com/
- Description: Custom blog design starts from just $500 @ <a href="http://www.askgraphics.com/blog-design.html">AskGraphics.com</a>.
+ Theme Name: VA responsive
+ Based on: BlueGrey from AskGraphics.com
  Version: 1.0
- Author: AskGraphics.com
- Author URI: http://www.AskGraphics.com/
+ Author: Marzena Mrugalska
 
- License Information :
-
- All templates are free to use as long as you leave the credits unchanged.
- You cannot claim these templates or modifications of these templates as yours.
-
- You cannot redistribute these templates on your website.
-
- You cannot modify these templates and distribute them.
  */
 /* reset styles */
 ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fieldset, input {
@@ -40,13 +31,13 @@ ul {
 body {
   margin: 0px;
   padding: 0px;
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-family: "PT Sans", Tahoma, sans-serif;
   font-size: 100%;
-  background: #eeeeee url("images/bg.png") repeat;
-  color: #4b4b4b; }
+  background: #eeeeee url("images/bg2m.jpg") repeat;
+  color: #6b6b5b; }
 
 a {
-  color: #0074be;
+  color: #368aad;
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
@@ -92,7 +83,7 @@ img {
   width: 64em;
   margin: 0 auto 2em;
   background-color: #FFF;
-  box-shadow: 0 0 0.5em rgba(150, 150, 150, 0.4); }
+  border: 2px solid #94d3de; }
 
 .main-content {
   width: 54%;
@@ -209,3 +200,40 @@ img {
 
 .is-nav .main-content {
   background-color: salmon; }
+
+/* post */
+.post {
+  margin-bottom: 2em;
+  line-height: 1.4em; }
+  .post p {
+    margin-bottom: 1em;
+    font-size: 0.8em; }
+  .post h2 {
+    font-size: 1.5em;
+    line-height: 1em;
+    font-family: "Oranienbaum", serif;
+    font-weight: 400; }
+  .post h3 {
+    font-size: 0.75em; }
+
+.post-title {
+  margin-bottom: 2em;
+  position: relative;
+  padding-top: 1em;
+  border-top: wheat 1px solid; }
+
+.post h4 {
+  position: absolute;
+  left: -101px;
+  top: 2px;
+  width: 60px;
+  font-size: 14px;
+  line-height: 1em;
+  overflow: hidden;
+  text-align: right;
+  border: 1px solid wheat;
+  padding: 5px;
+  background: #F5F2E5;
+  color: #916A5B;
+  box-shadow: -1px 0px 2px 1px rgba(0, 0, 0, 0.3);
+  font-weight: 400; }

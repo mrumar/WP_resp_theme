@@ -21,7 +21,6 @@ if (!is_user_logged_in()) {
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <?php wp_head(); ?>
-
 </head>
 
 <body>

@@ -3,7 +3,8 @@
     width: (1024 / $baseFontSize) + em;
     margin: 0 auto 2em;
     background-color:#FFF;
-    box-shadow: 0 0 .5em rgba(150, 150, 150, 0.4);
+    //box-shadow: 0 0 .5em rgba(150, 150, 150, 0.4);
+    border: 2px solid #94D3DE;
 }
 .main-content {
     width: 54%;
@@ -51,7 +52,8 @@
         width: 96%;
         padding: 0 2%;
         float:none;
-    }}
+    }
+}
 
 /******************** RETINA **************************/
 /* large and normal screen */

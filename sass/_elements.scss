@@ -4,4 +4,47 @@
     }
 .is-nav .main-content {
     background-color: salmon;
-}    
+}
+
+/* post */
+
+.post {
+    margin-bottom: 2em;
+    line-height: 1.4em;
+    p {
+        margin-bottom: 1em;
+        font-size: 0.8em;
+    }
+    h1 {}
+    h2 {
+        font-size: 1.5em;
+        line-height: 1em;
+        font-family: $headingFont;
+        font-weight: 400;
+    }
+    h3 {
+        font-size: 0.75em;
+    }
+}
+.post-title {
+    margin-bottom: 2em;
+    position: relative;
+    padding-top: 1em;
+    border-top: wheat 1px solid;
+}
+.post h4 {
+    position: absolute;
+    left: -101px;
+    top: 2px;
+    width: 60px;
+    font-size: 14px;
+    line-height: 1em;
+    overflow: hidden;
+    text-align: right;
+    border: 1px solid wheat;
+    padding: 5px;
+    background: #F5F2E5;
+    color: #916A5B;
+    box-shadow: -1px 0px 2px 1px rgba(0, 0, 0, 0.3);
+    font-weight: 400;
+}

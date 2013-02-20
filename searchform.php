@@ -2,7 +2,7 @@
     <div>
         <span>Szukaj :</span>
         <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" />
-        <input type="image" id="searchsubmit" src="/wp-content/themes/BlueGrey/images/searchbtn.gif" />
+        <input type="submit" id="searchsubmit" value="szukaj" />
     </div>
 </form>
 

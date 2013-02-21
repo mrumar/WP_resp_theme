@@ -25,49 +25,48 @@ if (!is_user_logged_in()) {
 
 <body>
 <div class="page">
+    <header class="main-header" id="top" role="banner">
+        <a class="banner" href="/">
+            <hgroup>
+                <h1>Voce Angeli</h1>
+                <h2>Chór śpiewający przy Bazylice Franciszkanów w Krakowie</h2>
+            </hgroup>
+        </a>
+        <a href="#mainNav" class="toggle-nav open">Przejdź do menu</a>
+    </header>
     <div class="inner-wrap">
+    <nav class="main-menu" role="navigation" id="mainNav">
+        <ul class="list">
+         <li class="active"><a href="/">strona główna</a></li>
+         <li><a href="/o-nas/">o nas</a>
+             <ul>
+                <li><a href="/o-nas/">O nas</a></li>
+                <li><a href="/sklad-osobowy/">Skład osobowy</a></li>
+                <li><a href="/kronika/">Kronika</a></li>
+                <li><a href="/kalendarium">Kalendarium</a></li>
+                <li><a href="/kontakt/">Kontakt</a></li>
+             </ul>
+         </li>
+         <li><a href="/category/nagrania/">nagrania</a>
+            <ul>
+                <li><a href="/category/utwory/">Audio</a></li>
+                <li><a href="/category/wideo/">Wideo</a></li>
+                <li><a href="/category/galeria/plyty">Płyty i publikacje</a></li>
+             </ul>
+         </li>
+         <li><a href="/category/galeria/">galeria</a>
+            <ul>
+                <li><a href="/category/galeria/galeria-zdjec/">Zdjęcia</a></li>
+                <li><a href="/category/galeria/plakaty">Plakaty</a></li>
+             </ul>
+         </li>
+         <li><a href="/category/ciekawostki/">ciekawostki</a></li>
+         <li><a href="/przyjaciele">przyjaciele</a></li>
+        </ul>
+        <a href="#top" class="toggle-nav close">Przejdź na górę</a>
+    </nav>
 
-<header class="main-header" id="top" role="banner">
-    <a class="banner" href="/">
-        <hgroup>
-            <h1>Voce Angeli</h1>
-            <h2>Chór śpiewający przy Bazylice Franciszkanów w Krakowie</h2>
-        </hgroup>
-    </a>
-    <a href="#mainNav" class="toggle-nav open">Przejdź do menu</a>
-</header>    
-<nav class="main-menu clear" role="navigation" id="mainNav">
-    <ul class="list">
-     <li class="active"><a href="/">strona główna</a></li>
-     <li><a href="/o-nas/">o nas</a>
-         <ul>
-            <li><a href="/o-nas/">O nas</a></li>
-            <li><a href="/sklad-osobowy/">Skład osobowy</a></li>
-            <li><a href="/kronika/">Kronika</a></li>
-            <li><a href="/kalendarium">Kalendarium</a></li>    
-            <li><a href="/kontakt/">Kontakt</a></li>    
-         </ul>
-     </li>
-     <li><a href="/category/nagrania/">nagrania</a>
-        <ul>
-            <li><a href="/category/utwory/">Audio</a></li>
-            <li><a href="/category/wideo/">Wideo</a></li>
-            <li><a href="/category/galeria/plyty">Płyty i publikacje</a></li>   
-         </ul>
-     </li>
-     <li><a href="/category/galeria/">galeria</a>
-        <ul>
-            <li><a href="/category/galeria/galeria-zdjec/">Zdjęcia</a></li>
-            <li><a href="/category/galeria/plakaty">Plakaty</a></li>    
-         </ul>
-     </li>
-     <li><a href="/category/ciekawostki/">ciekawostki</a></li>
-     <li><a href="/przyjaciele">przyjaciele</a></li>
-    </ul>
-    <a href="#top" class="toggle-nav close">Przejdź na górę</a>
-</nav>
-
-<div class="body">
+    <div class="body">
 
 	<div class="main-content" role="main">
     	<div class="StrefaVA"><?php if (is_user_logged_in()) {

@@ -2,8 +2,9 @@
 .page {
     width: (1024 / $baseFontSize) + em;
     margin: 0 auto 2em;
+}
+.inner-wrap {
     background-color:#FFF;
-    //box-shadow: 0 0 .5em rgba(150, 150, 150, 0.4);
     border: 2px solid #94D3DE;
 }
 .main-content {
@@ -37,6 +38,16 @@
     .main-content {
         width: 64%;
         padding: 0 2%;
+    }
+
+    /* elements */
+    .post-title {
+        padding-left: 5rem;
+        min-height: (62 / $baseFontSize) + rem;
+        time {
+            left: 0;
+            top: $minOnePx;
+        }
     }
 
 }

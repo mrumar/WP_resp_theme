@@ -11,9 +11,13 @@
 /* vars */
 $txtColor: #6B6B5B;
 $linkColor: #368AAD;
+$iconColor: #4F93AF;
 $bodyFont: 'PT Sans', Tahoma, sans-serif;
 $headingFont: 'Oranienbaum', serif;
 $baseFontSize: 16;
+$onePx: (1 / $baseFontSize) + rem;
+$minOnePx: (-1 / $baseFontSize) + rem;
+$twoPx: (2 / $baseFontSize) + rem;
 
 /* mixins */
 @mixin rem-font-size($sizeValue: 1){

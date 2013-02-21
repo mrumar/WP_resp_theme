@@ -10,17 +10,12 @@ window.onload = function() {
 			'icon-search' : '&#x22;',
 			'icon-radio-unchecked' : '&#x26;',
 			'icon-radio-checked' : '&#x27;',
-			'icon-bubble' : '&#x2a;',
 			'icon-list' : '&#x2f;',
 			'icon-arrow-right' : '&#x31;',
 			'icon-cancel' : '&#x28;',
 			'icon-locked' : '&#x29;',
 			'icon-unlocked' : '&#x2b;',
-			'icon-chat' : '&#x32;',
-			'icon-comments' : '&#x33;',
-			'icon-calendar' : '&#x23;',
-			'icon-calendar-alt-fill' : '&#x24;',
-			'icon-calendar-2' : '&#xf073;'
+			'icon-chat' : '&#x32;'
 		},
 		els = document.getElementsByTagName('*'),
 		i, attr, html, c, el;

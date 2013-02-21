@@ -8,29 +8,26 @@
 		    if (is_home() && in_category(8)){ continue; }
 		?>
 
-			<div class="post" id="post-<?php the_ID(); ?>">
-                <div class="post-top">
-                    <div class="post-title">
-                    	<h4><b><?php the_time('F d ') ?></b><?php the_time('Y') ?></h4>
-                    	<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php if ( function_exists('the_title_attribute')) the_title_attribute(); else the_title(); ?>"><?php the_title(); ?></a></h2>
-                        <?php if ( function_exists('the_tags')) the_tags('<h3 class="tags"><span>Tagi : </span>', ', ', ' </h3>'); ?>
-                       
-                    </div>
-                </div>
+			<article class="post" id="post-<?php the_ID(); ?>">
+                <header class="post-title">
+                    <time><b class="day"><?php the_time('d') ?></b><b class="month"><?php the_time('M') ?></b><span class="year"><?php the_time('Y') ?></span></time>
+                    <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php if ( function_exists('the_title_attribute')) the_title_attribute(); else the_title(); ?>"><?php the_title(); ?></a></h1>
+                    <?php if ( function_exists('the_tags')) the_tags('<p class="tags"><span>Tagi : </span>', ', ', ' </p>'); ?>
+                </header>
 
 				<div class="entry clear">
 					<?php the_content('',FALSE,''); ?>
 				</div>
 
-                <div class="postmetadata">
-                	  <div class="alignleft">
+                <footer class="post-metadata clear">
+                	  <div class="comments icon-comment">
                     	<?php comments_popup_link('Brak komentarzy', 'Komentarzy: <span>(1)</span>', 'Komentarzy: <span>(%)</span>'); ?>
                     </div>
-                    <div class="alignright">
+                    <div class="links icon-arrow-right">
                         <a class="readmore" href="<?php the_permalink() ?>" >Czytaj dalej</a><?php edit_post_link('Edytuj', '  ', ''); ?>
                     </div>
-                </div>
-			</div>
+                </footer>
+			</article>
 
 		<?php endwhile; ?>
 

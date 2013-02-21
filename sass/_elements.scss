@@ -9,42 +9,83 @@
 /* post */
 
 .post {
-    margin-bottom: 2em;
+    margin-bottom: 3em;
     line-height: 1.4em;
+
+    /* typography */
+    h1 {}
+    h2 {}
+    h3 {}
+    h4 {}
+    h5 {}
+    h6 {}
+    ul {}
+    ol {}
+    li {}
+    b, strong {}
+    i, em {}
+    blockquote {}
     p {
         margin-bottom: 1em;
-        font-size: 0.8em;
-    }
-    h1 {}
-    h2 {
-        font-size: 1.5em;
-        line-height: 1em;
-        font-family: $headingFont;
-        font-weight: 400;
-    }
-    h3 {
-        font-size: 0.75em;
+        font-size: 0.875rem;
     }
 }
 .post-title {
-    margin-bottom: 2em;
+    margin-bottom: 1.3em;
     position: relative;
     padding-top: 1em;
-    border-top: wheat 1px solid;
+    border-top: wheat $onePx solid;
+
+    h1 {
+        font-size: 1.75rem;
+        line-height: 1.2em;
+        font-family: $headingFont;
+        font-weight: 400;
+    }
+    .tags {
+        font-size: 0.75em;
+        margin-bottom: 0;
+    }
+    time {
+        position: absolute;
+        left: (-102 / $baseFontSize) + rem;
+        top: 0;
+        width: (50 / $baseFontSize) + rem;
+        font-size: 1em;
+        line-height: 1em;
+        overflow: hidden;
+        text-align: center;
+        border: $onePx solid wheat;
+        padding: (5 / $baseFontSize) + rem;
+        background-color: #F5F2E5;
+        color: #916A5B;
+        box-shadow: $minOnePx $onePx $twoPx 0 rgba(0, 0, 0, 0.25);
+        font-weight: 400;
+        b {
+            display: block;
+            font-family: $headingFont;
+            font-weight: 400;
+        }
+        .day {
+            font-size: 2.2em;
+            line-height: 1.1em;
+        }
+        .month {
+            font-size: 1em;
+            margin-bottom: 0.1em;
+            text-transform: uppercase;
+        }
+        .year {
+            font-size: 0.9em;
+        }
+    }
 }
-.post h4 {
-    position: absolute;
-    left: -101px;
-    top: 2px;
-    width: 60px;
-    font-size: 14px;
-    line-height: 1em;
-    overflow: hidden;
-    text-align: right;
-    border: 1px solid wheat;
-    padding: 5px;
-    background: #F5F2E5;
-    color: #916A5B;
-    box-shadow: -1px 0px 2px 1px rgba(0, 0, 0, 0.3);
-    font-weight: 400;
+.post-metadata {
+    font-size: 0.8em;
+    .comments {
+        float: left;
+    }
+    .links {
+        float: right;
+    }
 }

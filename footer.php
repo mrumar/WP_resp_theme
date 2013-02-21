@@ -1,9 +1,7 @@
     </div> <!-- end of main-content -->
 
 	<div class="side-content">
-    	<div id="body_right_content">
-            
-            <div id="main_search">
+            <div id="main_search" class="side-widget">
               <a href="<?php bloginfo('rss2_url'); ?>" title="Subskrybuj kanał RSS chóru Voce Angeli" class="RSSbtn">subskrybuj kanał rss</a>
                 <form method="get" id="searchform_top" action="<?php bloginfo('url'); ?>/">
                     <div>
@@ -23,8 +21,8 @@
             </div>
             */
             ?>
-            <div class="sidebar-wide-block" id="upcomming-concerts">
-              <h2>Najbliższe koncerty</h2>
+            <article class="side-widget" id="upcomming-concerts">
+              <h1>Najbliższe koncerty</h1>
               <ul>  
                   <?php 
                                   global $wpdb;
@@ -52,30 +50,28 @@
                                           }              
                   ?>              
                 </ul>
-            </div>
+            </article>
 		
 			<? if ( function_exists('wp_tag_cloud')){ ?>
-          <div id="main_tags" class="sidebar-wide-block">
-            	<h2>Tagi</h2>
+        <article class="side-widget" id="main_tags">
+            	<h1>Tagi</h1>
                 <?php wp_tag_cloud('smallest=8&largest=22&number=50'); ?>
-        	</div>
+        </article>
             <? } ?>
             
-            <!-- FB box -->
-            <div class="sidebar-wide-block" id="fb-box">
-            <h2>Voce na Facebooku</h2>
+        <!-- FB box -->
+        <article class="sidebar-wide-block" id="fb-box">
+            <h1>Voce na Facebooku</h1>
             <div class="fb-hide-border">
             <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FVoce-Angeli%2F167479236604347&amp;width=314&amp;colorscheme=light&amp;connections=5&amp;stream=false&amp;header=false&amp;height=192" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:314px; height:192px;" allowTransparency="true"></iframe>
             </div>
-            </div>
+        </article>
       
             <div id="sidebars">
                 <?php get_sidebar(); ?>
                 <?php get_sidebar_right(); ?>
             </div>
-            
-        </div>
-    </div> <!-- end of side-content -->
+        </div> <!-- end of side-content -->
 
 </div> <!-- end of div.body -->
 

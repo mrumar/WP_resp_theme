@@ -2,8 +2,12 @@
 .page {
     width: (1024 / $baseFontSize) + em;
     margin: 0 auto 2em;
+
 }
 .inner-wrap {
+    position: relative;
+}
+.body{
     background-color:#FFF;
     border: 2px solid #94D3DE;
 }
@@ -16,6 +20,9 @@
     width: 34%;
     float:right;
     padding: 0 2%;
+}
+.toggle-nav {
+    display: none;
 }
 
 /**************** NON RETINA ****************************/
@@ -63,6 +70,9 @@
         width: 96%;
         padding: 0 2%;
         float:none;
+    }
+    .toggle-nav {
+        display: block;
     }
 }
 

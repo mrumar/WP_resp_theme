@@ -1,6 +1,10 @@
     </div> <!-- end of main-content -->
 
 	<div class="side-content">
+        <figure class="display-photo">
+            <img src="<?php bloginfo('template_url'); ?>/images/voce1b.jpg" />
+        </figure>
+
             <div id="main_search" class="side-widget">
               <a href="<?php bloginfo('rss2_url'); ?>" title="Subskrybuj kanał RSS chóru Voce Angeli" class="RSSbtn">subskrybuj kanał rss</a>
                 <form method="get" id="searchform_top" action="<?php bloginfo('url'); ?>/">

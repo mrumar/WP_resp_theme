@@ -1,13 +1,63 @@
 .main-header {
-  width: 100%;
-  border-bottom: 3px solid #565656;
-  margin-bottom:2em;
+    width: 100%;
+    min-height: 8em;
+    h1 {
+        font-weight: 400;
+        font-size: 1.4em;
+    }
+    h2 {
+        font-weight: 400;
+        font-size: 1em;
+    }
+    hgroup {
+        float: left;
+    }
 }
-.banner {
-  
-}
-.main-menu li {
-  float: left;
+.main-menu {
+    position: absolute;
+    top:0.125em;
+    right: 0;
+    z-index: 1000;
+
+    li {
+        display: inline-block;
+        position: relative;
+    }
+    & > ul > li {
+        margin: (5/$baseFontSize) + rem;
+    }
+    .f-level {
+        background-color: #F5F2E5;
+        border: $onePx solid wheat;
+        box-shadow: $minOnePx $onePx $twoPx 0 rgba(0, 0, 0, 0.25);
+        border-radius: 3px;
+        padding: (5/$baseFontSize) + rem $tenPx;
+        display: block;
+        font-family: $headingFont;
+        color: #916A5B;
+        text-transform: capitalize;
+        font-size: 1.125em;
+        letter-spacing: $onePx;
+    }
+    .f-level:hover {
+        box-shadow: $minOnePx $onePx $twoPx 0 rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+    }
+    ul ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 2em;
+        background-color: #fff;
+        border: 1px solid wheat;
+    }
+    li:hover ul {
+        display: block;
+    }
+    ul ul li {
+        display: block;
+    }
+
 }
 
 /* main menu on small devices */

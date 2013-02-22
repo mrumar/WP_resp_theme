@@ -16,6 +16,7 @@ $bodyFont: 'PT Sans', Tahoma, sans-serif;
 $headingFont: 'Oranienbaum', serif;
 $baseFontSize: 16;
 $onePx: (1 / $baseFontSize) + rem;
+$tenPx: (10 / $baseFontSize) + rem;
 $minOnePx: (-1 / $baseFontSize) + rem;
 $twoPx: (2 / $baseFontSize) + rem;
 
@@ -51,7 +52,7 @@ body {
     padding: 0px;
     font-family: $bodyFont;
     font-size: 100%;
-    background: #eee url("images/bg2m.jpg") repeat;
+    background: url("images/music-pattern.png") no-repeat top right, #eee url("images/bg2m.jpg") repeat;
     color: $txtColor;
 }
 a {

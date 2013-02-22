@@ -33,7 +33,7 @@ body {
   padding: 0px;
   font-family: "PT Sans", Tahoma, sans-serif;
   font-size: 100%;
-  background: #eeeeee url("images/bg2m.jpg") repeat;
+  background: url("images/music-pattern.png") no-repeat top right, #eeeeee url("images/bg2m.jpg") repeat;
   color: #6b6b5b; }
 
 a {
@@ -138,11 +138,52 @@ img {
 
 .main-header {
   width: 100%;
-  border-bottom: 3px solid #565656;
-  margin-bottom: 2em; }
+  min-height: 8em; }
+  .main-header h1 {
+    font-weight: 400;
+    font-size: 1.4em; }
+  .main-header h2 {
+    font-weight: 400;
+    font-size: 1em; }
+  .main-header hgroup {
+    float: left; }
 
-.main-menu li {
-  float: left; }
+.main-menu {
+  position: absolute;
+  top: 0.125em;
+  right: 0;
+  z-index: 1000; }
+  .main-menu li {
+    display: inline-block;
+    position: relative; }
+  .main-menu > ul > li {
+    margin: 0.3125rem; }
+  .main-menu .f-level {
+    background-color: #F5F2E5;
+    border: 0.0625rem solid wheat;
+    box-shadow: -0.0625rem 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    padding: 0.3125rem 0.625rem;
+    display: block;
+    font-family: "Oranienbaum", serif;
+    color: #916A5B;
+    text-transform: capitalize;
+    font-size: 1.125em;
+    letter-spacing: 0.0625rem; }
+  .main-menu .f-level:hover {
+    box-shadow: -0.0625rem 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.6);
+    text-decoration: none; }
+  .main-menu ul ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 2em;
+    background-color: #fff;
+    border: 1px solid wheat; }
+  .main-menu li:hover ul {
+    display: block; }
+  .main-menu ul ul li {
+    display: block; }
 
 /* main menu on small devices */
 @media only screen and (max-width: 43.75em) {
@@ -235,7 +276,7 @@ img {
     margin-bottom: 0; }
   .post-title time {
     position: absolute;
-    left: -6.375rem;
+    left: -6.4375rem;
     top: 0;
     width: 3.125rem;
     font-size: 1em;
@@ -243,6 +284,7 @@ img {
     overflow: hidden;
     text-align: center;
     border: 0.0625rem solid wheat;
+    border-radius: 3px;
     padding: 0.3125rem;
     background-color: #F5F2E5;
     color: #916A5B;
@@ -268,6 +310,36 @@ img {
     float: left; }
   .post-metadata .links {
     float: right; }
+  .post-metadata .post-edit-link {
+    margin-left: 1em; }
+
+/* display photo */
+.display-photo {
+  background: #f8f8ff;
+  height: auto;
+  margin: -14% auto 10%;
+  padding: 0.625rem;
+  position: relative;
+  width: 17.5rem;
+  max-width: 90%;
+  -webkit-box-shadow: 0 0.0625rem 7px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0.0625rem 7px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.0625rem 7px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(5deg); }
+  .display-photo:after {
+    content: "";
+    position: absolute;
+    top: 0.625rem;
+    bottom: 0.625rem;
+    left: 0.625rem;
+    right: 0.625rem;
+    -webkit-box-shadow: inset 0 0 0.625rem rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: inset 0 0 0.625rem rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 0 0.625rem rgba(0, 0, 0, 0.25); }
+  .display-photo img {
+    display: block;
+    width: 17.5rem;
+    max-width: 100%; }
 
 /* default = large screen */
 .page {
@@ -275,6 +347,9 @@ img {
   margin: 0 auto 2em; }
 
 .inner-wrap {
+  position: relative; }
+
+.body {
   background-color: #FFF;
   border: 2px solid #94d3de; }
 
@@ -287,6 +362,9 @@ img {
   width: 34%;
   float: right;
   padding: 0 2%; }
+
+.toggle-nav {
+  display: none; }
 
 /**************** NON RETINA ****************************/
 /* large and normal screen */
@@ -322,7 +400,10 @@ img {
   .main-content, .side-content {
     width: 96%;
     padding: 0 2%;
-    float: none; } }
+    float: none; }
+
+  .toggle-nav {
+    display: block; } }
 /******************** RETINA **************************/
 /* large and normal screen */
 /* medium screen */

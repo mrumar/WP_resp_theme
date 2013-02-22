@@ -64,7 +64,7 @@
             <? } ?>
             
         <!-- FB box -->
-        <article class="sidebar-wide-block" id="fb-box">
+        <article class="side-widget" id="fb-box">
             <h1>Voce na Facebooku</h1>
             <div class="fb-hide-border">
             <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FVoce-Angeli%2F167479236604347&amp;width=314&amp;colorscheme=light&amp;connections=5&amp;stream=false&amp;header=false&amp;height=192" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:314px; height:192px;" allowTransparency="true"></iframe>

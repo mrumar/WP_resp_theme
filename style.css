@@ -153,38 +153,71 @@ img {
   position: absolute;
   top: 0.125em;
   right: 0;
-  z-index: 1000; }
+  z-index: 990; }
+  .main-menu .list {
+    font-size: 1.125em; }
   .main-menu li {
     display: inline-block;
     position: relative; }
-  .main-menu > ul > li {
+  .main-menu .list > li {
     margin: 0.3125rem; }
   .main-menu .f-level {
     background-color: #F5F2E5;
     border: 0.0625rem solid wheat;
     box-shadow: -0.0625rem 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.25);
-    border-radius: 3px;
-    padding: 0.3125rem 0.625rem 0.1875rem;
+    padding: 0 0.625rem;
+    line-height: 1.8125rem;
     display: block;
     font-family: "Oranienbaum", serif;
-    color: #916A5B;
+    color: #896252;
     text-transform: capitalize;
-    font-size: 1.125em;
-    letter-spacing: 0.0625rem; }
+    letter-spacing: 0.0625rem;
+    z-index: 992; }
   .main-menu .f-level:hover {
-    box-shadow: -0.0625rem 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.6);
+    box-shadow: -0.0625rem 0.0625rem 0.25rem 0 rgba(0, 0, 0, 0.6);
     text-decoration: none; }
+  .main-menu .active .f-level {
+    background-color: #837570;
+    color: floralwhite; }
   .main-menu ul ul {
-    display: none;
+    display: block;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: height 1s, opacity 0.5s;
+    transition: height 1s, opacity 0.5s;
     position: absolute;
     left: 0;
-    top: 2em;
-    background-color: #fff;
-    border: 1px solid wheat; }
-  .main-menu li:hover ul {
-    display: block; }
+    top: 1.875rem;
+    z-index: 991;
+    min-width: 8em;
+    box-shadow: -0.0625rem 0.0625rem 0.25rem 0 rgba(0, 0, 0, 0.6);
+    background-color: #F5F2E5;
+    border-bottom: 1px solid #837570; }
+  .main-menu li:hover ul, .main-menu li.ext ul {
+    opacity: 1; }
+  .main-menu li:hover .items-5, .main-menu li.ext .items-5 {
+    height: 9rem; }
+  .main-menu li:hover .items-3, .main-menu li.ext .items-3 {
+    height: 5.375rem; }
+  .main-menu li:hover .items-2, .main-menu li.ext .items-2 {
+    height: 3.5625rem; }
   .main-menu ul ul li {
-    display: block; }
+    display: block;
+    border-top: 0.0625rem solid rgba(255, 255, 255, 0.8);
+    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.15);
+    font-size: 0.77em; }
+  .main-menu ul ul li:first-child {
+    border-top: 0 none; }
+  .main-menu ul ul li:last-child {
+    border-bottom: 0 none; }
+  .main-menu ul ul li a {
+    display: block;
+    padding: 0.3em 0.6875rem;
+    color: #896252; }
+  .main-menu ul ul li a:hover {
+    background-color: #DFD2B7;
+    text-decoration: none; }
 
 /* main menu on small devices */
 @media only screen and (max-width: 43.75em) {
@@ -254,6 +287,16 @@ img {
   .post p {
     margin-bottom: 1em;
     font-size: 0.875rem; }
+  .post .alignright {
+    float: right;
+    margin-left: 0.5em; }
+  .post .alignleft {
+    float: left;
+    margin-right: 0.5em; }
+  .post .wp-caption-text {
+    font-size: 0.8em;
+    font-style: italic;
+    line-height: 1.3em; }
 
 .post-title {
   margin-bottom: 1.3em;
@@ -270,7 +313,7 @@ img {
     margin-bottom: 0; }
   .post-title time {
     position: absolute;
-    left: -6.4375rem;
+    left: -6.375rem;
     top: 0;
     width: 3.125rem;
     font-size: 1em;
@@ -278,7 +321,6 @@ img {
     overflow: hidden;
     text-align: center;
     border: 0.0625rem solid wheat;
-    border-radius: 3px;
     padding: 0.3125rem;
     background-color: #F5F2E5;
     color: #916A5B;
@@ -297,6 +339,9 @@ img {
       text-transform: uppercase; }
     .post-title time .year {
       font-size: 0.9em; }
+
+.post:first-child .post-title {
+  border-top: 0 none; }
 
 .post-metadata {
   font-size: 0.8em; }
@@ -340,17 +385,32 @@ img {
 #fb-box {
   overflow: hidden; }
 
+#fb-box iframe {
+  margin: -1px; }
+
+#fb-box .fb-hide-border {
+  width: 312px;
+  height: 190px;
+  overflow: hidden; }
+
 .is-nav .main-content {
   background-color: salmon; }
 
-.side-widget {
+.side-widget,
+.widget {
   margin-bottom: 2em;
-  border-top: wheat 0.0625rem solid;
   padding-top: .625em; }
-  .side-widget h1 {
+  .side-widget h1, .side-widget .widgettitle,
+  .widget h1,
+  .widget .widgettitle {
     font-family: "Oranienbaum", serif;
     font-weight: 400;
-    margin-bottom: .625em; }
+    margin-bottom: .625em;
+    background-color: #F5F2E5;
+    box-shadow: 0rem 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.25);
+    padding: 0.3em 0;
+    text-align: center;
+    color: #896252; }
 
 /* default = large screen */
 .page {
@@ -392,9 +452,8 @@ img {
 
   .main-content {
     width: 64%;
-    padding: 0 2%; }
-
-  /* elements */
+    padding: 0 2%; } }
+@media only screen and (min-width: 43.75em) and (max-width: 70.875em) {
   .post-title {
     padding-left: 5rem;
     min-height: 3.875rem; }

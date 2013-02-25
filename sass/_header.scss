@@ -18,45 +18,90 @@
     position: absolute;
     top:0.125em;
     right: 0;
-    z-index: 1000;
+    z-index: 990;
 
+    .list {
+        font-size: 1.125em;
+    }
     li {
         display: inline-block;
         position: relative;
     }
-    & > ul > li {
+    .list > li {
         margin: (5/$baseFontSize) + rem;
     }
     .f-level {
         background-color: #F5F2E5;
         border: $onePx solid wheat;
         box-shadow: $minOnePx $onePx $twoPx 0 rgba(0, 0, 0, 0.25);
-        border-radius: 3px;
-        padding: (5/$baseFontSize) + rem $tenPx (3/$baseFontSize) + rem;
+        padding: 0 $tenPx;
+        line-height: (29/$baseFontSize) + rem;
         display: block;
         font-family: $headingFont;
-        color: #916A5B;
+        color: #896252;
         text-transform: capitalize;
-        font-size: 1.125em;
         letter-spacing: $onePx;
+        z-index: 992;
     }
     .f-level:hover {
-        box-shadow: $minOnePx $onePx $twoPx 0 rgba(0, 0, 0, 0.6);
+        box-shadow: $minOnePx $onePx (4/$baseFontSize) + rem 0 rgba(0, 0, 0, 0.6);
         text-decoration: none;
     }
+    .active .f-level {
+        background-color: #837570;
+        color: floralwhite;
+    }
     ul ul {
-        display: none;
+        display: block;
+        height: 1px;
+        overflow: hidden;
+        opacity: 0;
+        -webkit-transition:height 1s, opacity 0.5s;
+        transition:height 1s, opacity 0.5s;
+
         position: absolute;
         left: 0;
-        top: 2em;
-        background-color: #fff;
-        border: 1px solid wheat;
+        top: (30/$baseFontSize) + rem;
+        z-index: 991;
+        min-width: 8em;
+        box-shadow: $minOnePx $onePx (4/$baseFontSize) + rem 0 rgba(0, 0, 0, 0.6);
+        background-color: #F5F2E5;
+        border-bottom: 1px solid #837570;
     }
-    li:hover ul {
-        display: block;
+    li:hover, li.ext {
+        ul {
+            opacity: 1;
+        }
+        .items-5 {
+            height: (144/$baseFontSize) + rem;
+        }
+        .items-3 {
+            height: (86/$baseFontSize) + rem;
+        }
+        .items-2 {
+            height: (57/$baseFontSize) + rem;
+        }
     }
     ul ul li {
-        display: block;
+        display: block; 
+        border-top: $onePx solid rgba(255,255,255,0.8);
+        border-bottom: $onePx solid rgba(0,0,0,0.15);
+        font-size: 0.77em;  
+    }
+    ul ul li:first-child {
+        border-top: 0 none;
+    }
+    ul ul li:last-child {
+        border-bottom: 0 none;
+    }
+    ul ul li a {
+        display: block; 
+        padding: 0.3em (11/$baseFontSize) + rem;
+        color: #896252;
+    }
+    ul ul li a:hover {
+        background-color: #DFD2B7;
+        text-decoration: none;
     }
 
 }

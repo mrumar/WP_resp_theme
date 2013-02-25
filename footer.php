@@ -5,13 +5,21 @@
             <img src="<?php bloginfo('template_url'); ?>/images/voce1b.jpg" />
         </figure>
 
-            <div id="main_search" class="side-widget">
-              <a href="<?php bloginfo('rss2_url'); ?>" title="Subskrybuj kanał RSS chóru Voce Angeli" class="RSSbtn">subskrybuj kanał rss</a>
+            <?php if (is_user_logged_in()) {
+                $user_info = get_userdata(1);
+                echo('<div class="logged-user">');
+                echo('</a><span>witaj '.$user_info->user_login.'!</span>');
+                echo('</div>');
+            }?>
+
+
+        <div id="main_search" class="side-widget">
+              <a href="<?php bloginfo('rss2_url'); ?>" title="Subskrybuj kanał RSS chóru Voce Angeli" class="icon-feed">subskrybuj kanał rss</a>
                 <form method="get" id="searchform_top" action="<?php bloginfo('url'); ?>/">
                     <div>
                     	<span>Szukaj :</span>
                         <input type="text" value="<?php the_search_query(); ?>" name="s" id="searchform_top_text" />
-                        <input type="submit" value="szukaj" id="gosearch" />
+                        <input type="submit" value="szukaj" id="gosearch" class="icon-search" />
                     </div>
                 </form>
             </div>
@@ -56,11 +64,14 @@
                 </ul>
             </article>
 		
-			<? if ( function_exists('wp_tag_cloud')){ ?>
+			<? 
+			if ( function_exists('wp_tag_cloud')){ ?>
+			<!--
         <article class="side-widget" id="main_tags">
             	<h1>Tagi</h1>
                 <?php wp_tag_cloud('smallest=8&largest=22&number=50'); ?>
         </article>
+        -->
             <? } ?>
             
         <!-- FB box -->

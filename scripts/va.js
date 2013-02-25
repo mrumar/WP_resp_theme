@@ -22,6 +22,9 @@ VA = function() {
         };
 
         html.on('click', '.toggle-nav', this.toggleNav);
+        if (this.is_touch_device()) {
+            html.on('touchend', '.f-level', this.touchMenuMode);
+        }
     }
     this.toggleNav = function(e) {
         html.hasClass(navClass) ? html.removeClass(navClass) : html.addClass(navClass);
@@ -52,6 +55,16 @@ VA = function() {
             return has3d !== 'none';
         } else {
             return false;
+        }
+    }
+
+    this.is_touch_device = function() {
+        return !!('ontouchstart' in window);
+    }
+    this.touchMenuMode = function(e) {
+        if (this.nextElementSibling) {
+            $(this).parent().toggleClass('ext');
+            e.preventDefault();
         }
     }
 }

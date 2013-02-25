@@ -40,7 +40,7 @@ if (!is_user_logged_in()) {
         <ul class="list">
          <li class="active"><a class="f-level" href="/">strona główna</a></li>
          <li><a class="f-level" href="/o-nas/">o nas</a>
-             <ul>
+             <ul class="items-5">
                 <li><a href="/o-nas/">O nas</a></li>
                 <li><a href="/sklad-osobowy/">Skład osobowy</a></li>
                 <li><a href="/kronika/">Kronika</a></li>
@@ -49,14 +49,14 @@ if (!is_user_logged_in()) {
              </ul>
          </li>
          <li><a class="f-level" href="/category/nagrania/">nagrania</a>
-            <ul>
+            <ul class="items-3">
                 <li><a href="/category/utwory/">Audio</a></li>
                 <li><a href="/category/wideo/">Wideo</a></li>
                 <li><a href="/category/galeria/plyty">Płyty i publikacje</a></li>
              </ul>
          </li>
          <li><a class="f-level" href="/category/galeria/">galeria</a>
-            <ul>
+            <ul class="items-2">
                 <li><a href="/category/galeria/galeria-zdjec/">Zdjęcia</a></li>
                 <li><a href="/category/galeria/plakaty">Plakaty</a></li>
              </ul>
@@ -70,6 +70,3 @@ if (!is_user_logged_in()) {
     <div class="body clear">
 
 	<div class="main-content" role="main">
-    	<div class="StrefaVA"><?php if (is_user_logged_in()) {
-      $user_info = get_userdata(1);
-      echo('<a href="/category/pliki/">');}?><em>strefa va</em><?php if (is_user_logged_in()) { echo('</a><span>witaj '.$user_info->user_login.'!</span>');}?></div>    	

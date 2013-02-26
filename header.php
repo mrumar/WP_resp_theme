@@ -29,11 +29,11 @@ if (!is_user_logged_in()) {
     <header class="main-header" id="top" role="banner">
         <a class="banner" href="/">
             <hgroup>
-                <h1>Voce Angeli</h1>
-                <h2>Chór śpiewający przy Bazylice Franciszkanów w Krakowie</h2>
+                <h1 class="icon-logo">Voce Angeli</h1>
+                <h2>Chór śpiewający przy Bazylice Franciszkanów w&nbsp;Krakowie</h2>
             </hgroup>
         </a>
-        <a href="#mainNav" class="toggle-nav open">Przejdź do menu</a>
+        <a href="#mainNav" class="toggle-nav icon-list">Przejdź do menu</a>
     </header>
 
     <nav class="main-menu" role="navigation" id="mainNav">
@@ -64,7 +64,7 @@ if (!is_user_logged_in()) {
          <li><a class="f-level" href="/category/ciekawostki/">ciekawostki</a></li>
          <li><a class="f-level" href="/przyjaciele">przyjaciele</a></li>
         </ul>
-        <a href="#top" class="toggle-nav close">Przejdź na górę</a>
+        <a href="#top" class="toggle-nav icon-close">Zamknij menu</a>
     </nav>
 
     <div class="body clear">

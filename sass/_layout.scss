@@ -46,6 +46,18 @@
         width: 64%;
         padding: 0 2%;
     }
+    .main-header{
+        h1 {
+            width: 8rem;
+            background-position: 0 90%;
+        }
+        h2 {
+            left: 8.2rem;
+            top: 5.2rem;
+        }
+    }
+
+
 
 }
 @media only screen and (min-width : 43.75em) and (max-width : 70.875em) {

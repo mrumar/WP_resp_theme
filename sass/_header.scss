@@ -165,9 +165,7 @@
     }
     .js .inner-wrap {
           -webkit-transition: left 500ms ease-out;
-          -moz-transition: left 500ms ease-out;
-          -o-transition: left 500ms ease-out;
-      transition: left 500ms ease-out;
+        transition: left 500ms ease-out;
     }
     .is-nav .inner-wrap {
         position:relative;
@@ -190,8 +188,6 @@
             -o-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
             -webkit-transition: -webkit-transform 500ms ease-out;
-            -moz-transition: -moz-transform 500ms ease-out;
-            -o-transition: -o-transform 500ms ease-out;
         transition: transform 500ms ease-out;
    }
    .transforms3d.is-nav .inner-wrap {

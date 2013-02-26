@@ -58,8 +58,12 @@ body {
 a {
     color: $linkColor;
     text-decoration: none;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+
     &:hover {
         text-decoration: underline;
+        color: #236E8D;
     }
     img {
         border: 0;

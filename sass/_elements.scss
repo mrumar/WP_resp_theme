@@ -148,6 +148,17 @@
   height:190px;
   overflow:hidden;
 }
+.icon-feed {
+    float:left;
+    width: 2rem;
+    height: 2rem;
+    overflow: hidden;
+    font-size: 1.6em;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
 
 .side-widget, 
 .widget {

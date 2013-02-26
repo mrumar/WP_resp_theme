@@ -38,9 +38,12 @@ body {
 
 a {
   color: #368aad;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s; }
   a:hover {
-    text-decoration: underline; }
+    text-decoration: underline;
+    color: #236E8D; }
   a img {
     border: 0; }
 
@@ -102,7 +105,8 @@ img {
   -webkit-font-smoothing: antialiased; }
 
 .icon-feed:before {
-  content: "\21"; }
+  content: "\21";
+  margin: 0 1em 1em 0; }
 
 .icon-search:before {
   content: "\22"; }
@@ -276,8 +280,6 @@ img {
 
   .js .inner-wrap {
     -webkit-transition: left 500ms ease-out;
-    -moz-transition: left 500ms ease-out;
-    -o-transition: left 500ms ease-out;
     transition: left 500ms ease-out; }
 
   .is-nav .inner-wrap {
@@ -301,8 +303,6 @@ img {
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     -webkit-transition: -webkit-transform 500ms ease-out;
-    -moz-transition: -moz-transform 500ms ease-out;
-    -o-transition: -o-transform 500ms ease-out;
     transition: transform 500ms ease-out; }
 
   .transforms3d.is-nav .inner-wrap {
@@ -433,6 +433,16 @@ img {
   width: 312px;
   height: 190px;
   overflow: hidden; }
+
+.icon-feed {
+  float: left;
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+  font-size: 1.6em;
+  text-decoration: none; }
+  .icon-feed:hover {
+    text-decoration: none; }
 
 .side-widget,
 .widget {

@@ -1,3 +1,5 @@
+jQuery.noConflict();
+
 // Google webfonts
 WebFontConfig = {
     google: { families: [ 'PT+Sans:400,700,400italic:latin,latin-ext', 'Oranienbaum::latin,latin-ext' ] }
@@ -13,7 +15,7 @@ WebFontConfig = {
     })();
 
 VA = function() {
-    var html = $('html'), navClass = 'is-nav';
+    var html = jQuery('html'), navClass = 'is-nav';
 
     this.init = function() {
         html.addClass('js');
@@ -63,12 +65,12 @@ VA = function() {
     }
     this.touchMenuMode = function(e) {
         if (this.nextElementSibling) {
-            $(this).parent().toggleClass('ext');
+            jQuery(this).parent().toggleClass('ext');
             e.preventDefault();
         }
     }
 }
-$(function() {
+jQuery(function() {
     var va = va || new VA();
     va.init();
 });

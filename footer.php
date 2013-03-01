@@ -19,7 +19,7 @@
                     <div>
                     	<span>Szukaj :</span>
                         <input type="text" value="<?php the_search_query(); ?>" name="s" id="searchform_top_text" />
-                        <input type="submit" value="szukaj" id="gosearch" class="icon-search" />
+                        <button type="submit" id="gosearch" class="icon-search" >szukaj</button>
                     </div>
                 </form>
             </div>

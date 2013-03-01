@@ -1,19 +1,23 @@
 <?php get_header(); ?>
 
-	<div id="content" class="pagenarrow">
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <article class="post" id="post-<?php the_ID(); ?>">
+        <header class="post-title">
+            <h1><?php the_title(); ?></h1>
+        </header>
+        <div class="entry">
+            <?php the_content('<p class="serif">Przeczytaj dalszą część strony &raquo;</p>'); ?>
 
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<div class="post-page" id="post-<?php the_ID(); ?>">
-		<h2><?php the_title(); ?></h2>
-			<div class="entry">
-				<?php the_content('<p class="serif">Przeczytaj dalszą część strony &raquo;</p>'); ?>
+            <?php wp_link_pages(array('before' => '<p><strong>Strony:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 
-				<?php wp_link_pages(array('before' => '<p><strong>Strony:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
+            <footer class="post-metadata clear">
 
-				<?php edit_post_link('Edytuj tą stronę.', '<br /><p>', '</p>'); ?>
-			</div>
-		</div>
-		<?php endwhile; endif; ?>
-	</div>
+                <div class="links">
+                    <?php edit_post_link('Edytuj tą stronę.', '', ''); ?>
+                </div>
+            </footer>
+        </div>
+    </article>
+    <?php endwhile; endif; ?>
 
 <?php get_footer(); ?>

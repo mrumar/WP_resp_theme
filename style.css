@@ -147,6 +147,9 @@ img {
   width: 100%;
   min-height: 8em;
   position: relative; }
+  .main-header .banner {
+    width: 11.56rem;
+    display: block; }
   .main-header h1 {
     background: url("images/logo2.gif") no-repeat 0 0.3rem;
     background-size: 100% auto;
@@ -173,7 +176,6 @@ img {
     width: 4rem;
     height: 4rem;
     overflow: hidden;
-    z-index: 1100;
     background-color: #F5F2E5;
     color: #916A5B;
     box-shadow: -0.0625rem 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.25); }
@@ -184,8 +186,7 @@ img {
 .main-menu {
   position: absolute;
   top: 0.125em;
-  right: 0;
-  z-index: 990; }
+  right: 0; }
   .main-menu .list {
     font-size: 1.125em; }
   .main-menu li {
@@ -203,8 +204,7 @@ img {
     font-family: "Oranienbaum", serif;
     color: #896252;
     text-transform: capitalize;
-    letter-spacing: 0.0625rem;
-    z-index: 992; }
+    letter-spacing: 0.0625rem; }
   .main-menu .f-level:hover {
     box-shadow: -0.0625rem 0.0625rem 0.25rem 0 rgba(0, 0, 0, 0.6);
     text-decoration: none; }
@@ -221,7 +221,7 @@ img {
     position: absolute;
     left: 0;
     top: 1.875rem;
-    z-index: 991;
+    z-index: 78;
     min-width: 8em;
     box-shadow: -0.0625rem 0.0625rem 0.25rem 0 rgba(0, 0, 0, 0.6);
     background-color: #F5F2E5;
@@ -279,8 +279,8 @@ img {
     top: 0; }
 
   .js .inner-wrap {
-    -webkit-transition: left 500ms ease-out;
-    transition: left 500ms ease-out; }
+    -webkit-transition: left 300ms ease-out;
+    transition: left 300ms ease-out; }
 
   .is-nav .inner-wrap {
     position: relative;
@@ -302,8 +302,8 @@ img {
     -ms-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    -webkit-transition: -webkit-transform 500ms ease-out;
-    transition: transform 500ms ease-out; }
+    -webkit-transition: -webkit-transform 300ms ease-out;
+    transition: transform 300ms ease-out; }
 
   .transforms3d.is-nav .inner-wrap {
     -webkit-transform: translate3d(70%, 0, 0) scale3d(1, 1, 1);
@@ -315,7 +315,7 @@ img {
 
   .transforms3d .main-menu .list {
     -webkit-transform: translate3d(70%, 0, 0) scale3d(0.9, 0.9, 0.9);
-    -webkit-transition: -webkit-transform 500ms ease-out;
+    -webkit-transition: -webkit-transform 300ms ease-out;
     -webkit-transform-origin: 50% 0; }
 
   .transforms3d.is-nav .main-menu .list {
@@ -393,6 +393,22 @@ img {
   .post-metadata .post-edit-link {
     margin-left: 1em; }
 
+.other-posts-links {
+  font-family: "Oranienbaum", serif;
+  font-weight: 400;
+  margin: 1em 0 2em;
+  background-color: #F5F2E5;
+  box-shadow: 0rem 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.25);
+  padding: 0.2em 0.2em;
+  font-size: 1rem;
+  text-align: center;
+  color: #896252; }
+  .other-posts-links .prev {
+    float: left; }
+  .other-posts-links .next {
+    float: right; }
+
+/* contact page */
 /* display photo */
 .display-photo {
   background: #f8f8ff;
@@ -420,6 +436,12 @@ img {
     display: block;
     width: 17.5rem;
     max-width: 100%; }
+
+/* footer */
+.main-footer {
+  font-size: 0.8em;
+  text-align: center;
+  padding: 0.5em 0; }
 
 /* side bar */
 /* fb box */
@@ -459,6 +481,21 @@ img {
     padding: 0.3em 0;
     text-align: center;
     color: #896252; }
+  .side-widget li,
+  .widget li {
+    display: block;
+    border-top: 0.0625rem solid rgba(255, 255, 255, 0.8);
+    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.15);
+    font-size: 0.85rem; }
+    .side-widget li a,
+    .widget li a {
+      display: block;
+      padding: 0.3em 0.6875rem;
+      color: #896252; }
+      .side-widget li a:hover,
+      .widget li a:hover {
+        background-color: #ECEAE6;
+        text-decoration: none; }
 
 /* default = large screen */
 .page {
@@ -480,7 +517,7 @@ img {
 .side-content {
   width: 34%;
   float: right;
-  padding: 0 2%; }
+  padding: 0 2% 2em; }
 
 .toggle-nav {
   display: none; }
@@ -508,7 +545,7 @@ img {
   .main-header h2 {
     left: 8.2rem;
     top: 5.2rem; } }
-@media only screen and (min-width: 43.75em) and (max-width: 70.875em) {
+@media only screen and (max-width: 70.875em) {
   .post-title {
     padding-left: 5rem;
     min-height: 3.875rem; }
@@ -528,7 +565,15 @@ img {
     float: none; }
 
   .toggle-nav {
-    display: block; } }
+    display: block; }
+
+  .display-photo {
+    display: none; } }
+/* very small screen */
+@media only screen and (max-width: 26.75em) {
+  .main-header h2 {
+    position: static;
+    padding: 0 0.5rem 1rem; } }
 /******************** RETINA **************************/
 /* large and normal screen */
 /* medium screen */

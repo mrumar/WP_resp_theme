@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-	<div>
-
 	<?php if (have_posts()) : ?>
 
 		<?php while (have_posts()) : the_post(); 
@@ -43,7 +41,5 @@
 		<?php include (TEMPLATEPATH . "/searchform.php"); ?>
 
 	<?php endif; ?>
-
-	</div>
 
 <?php get_footer(); ?>

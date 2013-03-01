@@ -1,9 +1,8 @@
 <?php get_header(); ?>
 
-	<div id="content" class="narrowcolumn">
-
-		<h2 class="center">Błąd 404. Strona nie została odnaleziona.</h2>
-
-	</div>
-
+<article class="post">
+    <header class="post-title">
+        <h1>Błąd 404. Strona nie została odnaleziona.</h1>
+    </header>
+</article>
 <?php get_footer(); ?>

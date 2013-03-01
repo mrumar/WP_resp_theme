@@ -27,12 +27,10 @@ if (!is_user_logged_in()) {
 <div class="page">
     <div class="inner-wrap">
     <header class="main-header" id="top" role="banner">
-        <a class="banner" href="/">
-            <hgroup>
-                <h1 class="icon-logo">Voce Angeli</h1>
-                <h2>Chór śpiewający przy Bazylice Franciszkanów w&nbsp;Krakowie</h2>
-            </hgroup>
-        </a>
+        <hgroup>
+            <a class="banner" href="/"><h1 class="icon-logo">Voce Angeli</h1></a>
+            <h2>Chór śpiewający przy Bazylice Franciszkanów w&nbsp;Krakowie</h2>
+        </hgroup>
         <a href="#mainNav" class="toggle-nav icon-list">Przejdź do menu</a>
     </header>
 

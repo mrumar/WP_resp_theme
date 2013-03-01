@@ -23,16 +23,6 @@
                     </div>
                 </form>
             </div>
-            <?php
-            /*
-            <div id="main_ads">
-            <script type="text/javascript" id="AdTaily_Widget" src="http://static.adtaily.pl/widget.js#GbWpZHtcR6BoS9Y"></script>
-            <noscript><a href="http://www.adtaily.pl">Prosta i tania reklama w Internecie sprzedawana za pomocą AdTaily</a>(PLALLADTAILY0002)</noscript>
-
-            	<div class="clear"></div>
-            </div>
-            */
-            ?>
             <article class="side-widget" id="upcomming-concerts">
               <h1>Najbliższe koncerty</h1>
               <ul>  
@@ -66,38 +56,26 @@
 		
 			<? 
 			if ( function_exists('wp_tag_cloud')){ ?>
-			<!--
-        <article class="side-widget" id="main_tags">
-            	<h1>Tagi</h1>
-                <?php wp_tag_cloud('smallest=8&largest=22&number=50'); ?>
-        </article>
-        -->
             <? } ?>
             
-        <!-- FB box -->
-        <article class="side-widget" id="fb-box">
-            <h1>Voce na Facebooku</h1>
-            <div class="fb-hide-border">
-            <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FVoce-Angeli%2F167479236604347&amp;width=314&amp;colorscheme=light&amp;connections=5&amp;stream=false&amp;header=false&amp;height=192" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:314px; height:192px;" allowTransparency="true"></iframe>
-            </div>
-        </article>
-      
-            <div id="sidebars">
-                <?php get_sidebar(); ?>
-                <?php get_sidebar_right(); ?>
-            </div>
+            <!-- FB box -->
+            <article class="side-widget" id="fb-box">
+                <h1>Voce na Facebooku</h1>
+                <div class="fb-hide-border">
+                <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FVoce-Angeli%2F167479236604347&amp;width=314&amp;colorscheme=light&amp;connections=5&amp;stream=false&amp;header=false&amp;height=192" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:314px; height:192px;" allowTransparency="true"></iframe>
+                </div>
+            </article>
+            <!-- sidebars -->
+            <?php get_sidebar(); ?>
+            <?php get_sidebar_right(); ?>
         </div> <!-- end of side-content -->
 
 </div> <!-- end of div.body -->
 
-<div class="footer clear">
-    <div id="footer_text">
+<div class="main-footer clear">
+    <div>
         <a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a> &copy; All Rights Reserved. 
         <a href="/kontakt/">Kontakt</a>
-    </div>
-    <div id="footer_copyrights">
-        Theme by <a href="http://www.skinpress.com/">SkinPress.com</a>
-
     </div>
 </div>
 

@@ -19,7 +19,7 @@
 .side-content {
     width: 34%;
     float:right;
-    padding: 0 2%;
+    padding: 0 2% 2em;
 }
 .toggle-nav {
     display: none;
@@ -60,7 +60,7 @@
 
 
 }
-@media only screen and (min-width : 43.75em) and (max-width : 70.875em) {
+@media only screen and (max-width : 70.875em) {
     .post-title {
         padding-left: 5rem;
         min-height: (62 / $baseFontSize) + rem;
@@ -85,6 +85,16 @@
     }
     .toggle-nav {
         display: block;
+    }
+    .display-photo {
+        display: none;
+    }
+}
+/* very small screen */
+@media only screen and (max-width: 26.75em) {
+    .main-header h2 {
+        position: static;
+        padding: 0 0.5rem 1rem;
     }
 }
 

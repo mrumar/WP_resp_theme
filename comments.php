@@ -6,7 +6,7 @@
 		if ($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password) {  // and it doesn't match the cookie
 			?>
 
-			<p class="nocomments">Ten wpis jest chroniony hasłem. Podaj hasło aby zobaczyć komentarze..</p>
+<p class="nocomments" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">Ten wpis jest chroniony hasłem. Podaj hasło aby zobaczyć komentarze..</p>
 
 			<?php
 			return;
@@ -20,22 +20,19 @@
 <!-- You can start editing here. -->
 
 <?php if ($comments) : ?>
-	<h2 id="comment_title">Komentarze:</h2>
-	<!--<h3 id="comments"><?php comments_number('Brak komentarzy', '(01)', '(%)' );?> posted on <?php the_title(); ?></h3>    //-->
-
-	<ol class="commentlist">
+	<h1>Komentarze:</h1>
+	<ol class="comment-list">
 
 	<?php foreach ($comments as $comment) : ?>
 
 		<li <?php echo $oddcomment; ?>id="comment-<?php comment_ID() ?>">
-        	<div class="commentmetadata"><span><?php comment_author_link() ?></span> </div>
+        	<div class="comment-author icon-comment"><?php comment_author_link() ?></div>
 			<?php if ($comment->comment_approved == '0') : ?>
-			<em>Twój komentarz czeka na akceptację przez moderatora.</em>
+			<em class="comment-accept">Twój komentarz czeka na akceptację przez moderatora.</em>
 			<?php endif; ?>
-			<div class="commentmetadata_text"><?php comment_text() ?></div>
-        	<div class="commentmetadata_end">Napisano <span><?php pl_comment_date() ?> o godzinie <?php comment_time() ?></span></div>
-
-		</li>
+			<div class="comment-text"><?php comment_text() ?></div>
+        	<div class="comment-time">Napisano <span><?php pl_comment_date() ?> o godzinie <?php comment_time() ?></span></div>
+        </li>
 
 	<?php
 		/* Changes every other comment to a different class */
@@ -61,8 +58,8 @@
 
 <?php if ('open' == $post->comment_status) : ?>
 
-<div id="respond_box">
-<h3 id="respond">Dodaj komentarz</h3>
+<div class="comment-form">
+    <h2>Dodaj komentarz</h2>
 
 <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
 <p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>">logged in</a> to post a comment.</p>
@@ -76,18 +73,13 @@
 
 <?php else : ?>
 
-<p><input type="text" name="author" class="comm_input_text" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
-<label for="author">Imię <?php if ($req) echo "(wymagane)"; ?></label></p>
+<p><label for="author">Imię <?php if ($req) echo "<i>(wymagane)</i>"; ?></label><input type="text" name="author" class="comm_input_text" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
+</p>
 
-<p><input type="text" name="email" class="comm_input_text" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
-<label for="email">Email (nie będzie wyświetlany) <?php if ($req) echo "(wymagane)"; ?></label></p>
-
-<p><input type="text" name="url" class="comm_input_text" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
-<label for="url">Strona www</label></p>
+<p><label for="email">Email (nie będzie wyświetlany) <?php if ($req) echo "<i>(wymagane)</i>"; ?></label><input type="text" name="email" class="comm_input_text" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
+</p>
 
 <?php endif; ?>
-
-<!--<p><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></small></p>-->
 
 <p><textarea name="comment" class="comm_textarea_text" id="comment" cols="40" rows="6" tabindex="4"></textarea></p>
 

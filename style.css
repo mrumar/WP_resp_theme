@@ -109,7 +109,9 @@ img {
   margin: 0 1em 1em 0; }
 
 .icon-search:before {
-  content: "\22"; }
+  content: "\22";
+  vertical-align: middle;
+  margin-right: 1rem; }
 
 .icon-radio-unchecked:before {
   content: "\26"; }
@@ -202,7 +204,7 @@ img {
     line-height: 1.8125rem;
     display: block;
     font-family: "Oranienbaum", serif;
-    color: #896252;
+    color: #815542;
     text-transform: capitalize;
     letter-spacing: 0.0625rem; }
   .main-menu .f-level:hover {
@@ -246,7 +248,7 @@ img {
   .main-menu ul ul a {
     display: block;
     padding: 0.3em 0.6875rem;
-    color: #896252; }
+    color: #815542; }
   .main-menu ul ul li a:hover {
     background-color: #DFD2B7;
     text-decoration: none; }
@@ -338,6 +340,8 @@ img {
     font-size: 0.8em;
     font-style: italic;
     line-height: 1.3em; }
+  .post .entry {
+    margin-bottom: 1rem; }
 
 .post-title {
   margin-bottom: 1.3em;
@@ -364,7 +368,7 @@ img {
     border: 0.0625rem solid wheat;
     padding: 0.3125rem;
     background-color: #F5F2E5;
-    color: #916A5B;
+    color: #815542;
     box-shadow: -0.0625rem 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.25);
     font-weight: 400; }
     .post-title time b {
@@ -386,7 +390,7 @@ img {
 
 .post-metadata {
   font-size: 0.8em; }
-  .post-metadata .comments {
+  .post-metadata .icon-comment {
     float: left; }
   .post-metadata .links {
     float: right; }
@@ -401,14 +405,92 @@ img {
   box-shadow: 0rem 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.25);
   padding: 0.2em 0.2em;
   font-size: 1rem;
-  text-align: center;
-  color: #896252; }
+  text-align: center; }
   .other-posts-links .prev {
     float: left; }
   .other-posts-links .next {
     float: right; }
 
-/* contact page */
+/* comments */
+.comments h1 {
+  font-size: 1.375rem;
+  line-height: 1.2em;
+  font-family: "Oranienbaum", serif;
+  font-weight: 400;
+  margin-top: 0.5em; }
+
+.comment-list {
+  list-style-type: none;
+  margin-bottom: 1rem; }
+  .comment-list li {
+    border-top: 0.0625rem solid rgba(255, 255, 255, 0.8);
+    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.15);
+    font-size: 0.85rem;
+    padding: 0.6em 0 1.2em; }
+  .comment-list .comment-author {
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 0.375rem; }
+  .comment-list .icon-comment:before {
+    color: #6B6B5B;
+    margin-right: 0.375rem; }
+  .comment-list .comment-accept {
+    color: #ce6b42; }
+  .comment-list .comment-text p {
+    margin-bottom: 0; }
+  .comment-list .comment-time {
+    font-size: 0.8em;
+    color: #815542; }
+
+.comment-form {
+  margin-top: 2rem;
+  width: 20em;
+  max-width: 100%; }
+  .comment-form h2 {
+    font-size: 1.375rem;
+    line-height: 1.2em;
+    font-family: "Oranienbaum", serif;
+    font-weight: 400;
+    margin-bottom: 0.5em; }
+  .comment-form label {
+    display: block; }
+    .comment-form label i {
+      color: #ce6b42;
+      font-size: 0.85em;
+      vertical-align: middle; }
+
+input, textarea {
+  font-family: "PT Sans", Tahoma, sans-serif;
+  font-size: 0.875rem;
+  color: #6b6b5b;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5em 1em;
+  border: 1px solid #cfbea8;
+  -webkit-box-shadow: -0.0625rem 0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: -0.0625rem 0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.25);
+  box-shadow: -0.0625rem 0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.25); }
+
+button {
+  background-color: #F5F2E5;
+  border: 0.0625rem solid wheat;
+  box-shadow: -0.0625rem 0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.35);
+  padding: 0 0.625rem;
+  line-height: 1.8125rem;
+  display: block;
+  font-family: "Oranienbaum", serif;
+  font-size: 1.2rem;
+  color: #815542;
+  text-transform: capitalize;
+  letter-spacing: 0.0625rem;
+  cursor: pointer; }
+  button:hover {
+    box-shadow: 0.0625rem -0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.35); }
+  button:active {
+    box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.6); }
+
 /* display photo */
 .display-photo {
   background: #f8f8ff;
@@ -443,7 +525,7 @@ img {
   text-align: center;
   padding: 0.5em 0; }
 
-/* side bar */
+/*** side bar ***/
 /* fb box */
 #fb-box {
   overflow: hidden; }
@@ -480,7 +562,7 @@ img {
     box-shadow: 0rem 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.25);
     padding: 0.3em 0;
     text-align: center;
-    color: #896252; }
+    color: #815542; }
   .side-widget li,
   .widget li {
     display: block;
@@ -491,12 +573,46 @@ img {
     .widget li a {
       display: block;
       padding: 0.3em 0.6875rem;
-      color: #896252; }
+      color: #815542; }
       .side-widget li a:hover,
       .widget li a:hover {
         background-color: #ECEAE6;
         text-decoration: none; }
 
+.search-box {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 2rem;
+  padding-top: 0; }
+  .search-box .icon-feed {
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+
+.search-input {
+  margin-right: 2.4em; }
+
+.search-btn {
+  width: 2.4rem;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  margin: 0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+  .search-btn:hover {
+    box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.6); }
+
+/* contact page */
+/* elementy posta */
+/* wyniki wyszukiwania */
+/* nadch. koncerty */
 /* default = large screen */
 .page {
   width: 64em;

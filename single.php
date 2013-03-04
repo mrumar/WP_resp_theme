@@ -13,7 +13,7 @@
             </div>
 
             <footer class="post-metadata clear">
-                <div class="comments icon-comment">
+                <div class="icon-comment">
                     <?php comments_popup_link('Brak komentarzy', 'Komentarzy: <span>(1)</span>', 'Komentarzy: <span>(%)</span>'); ?>
                 </div>
                 <div class="links">
@@ -24,7 +24,7 @@
                 <span class="prev"><?php previous_post_link('%link', '&laquo; poprzedni wpis', TRUE); ?></span>
                 <span class="next"><?php next_post_link('%link', 'następny wpis &raquo;', TRUE); ?></span>
             </nav>
-            <aside class="comments">
+            <aside class="comments" id="comments">
                 <?php comments_template(); ?>
             </aside>
         </article>

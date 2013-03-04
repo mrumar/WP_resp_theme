@@ -18,7 +18,7 @@
 				</div>
 
                 <footer class="post-metadata clear">
-                	  <div class="comments icon-comment">
+                	  <div class="icon-comment">
                     	<?php comments_popup_link('Brak komentarzy', 'Komentarzy: <span>(1)</span>', 'Komentarzy: <span>(%)</span>'); ?>
                     </div>
                     <div class="links icon-arrow-right">
@@ -28,11 +28,10 @@
 			</article>
 
 		<?php endwhile; ?>
-
-		<div class="navigation">
-			<div class="alignleft"><?php next_posts_link('&laquo; Starsze wpisy') ?></div>
-			<div class="alignright"><?php previous_posts_link('Nowsze wpisy &raquo;') ?></div>
-		</div>
+        <nav class="other-posts-links clear">
+            <span class="prev"><?php next_posts_link('&laquo; Starsze wpisy') ?></span>
+            <span class="next"><?php previous_posts_link('Nowsze wpisy &raquo;') ?></span>
+        </nav>
 
 	<?php else : ?>
 

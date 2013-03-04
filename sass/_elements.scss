@@ -34,6 +34,9 @@
         font-style: italic;
         line-height: 1.3em;
     }
+    .entry {
+        margin-bottom: 1rem;
+    }
 }
 .post-title {
     margin-bottom: 1.3em;
@@ -63,7 +66,7 @@
         border: $onePx solid wheat;
         padding: (5 / $baseFontSize) + rem;
         background-color: #F5F2E5;
-        color: #916A5B;
+        color: $highlightColor;
         box-shadow: $minOnePx $onePx $twoPx 0 rgba(0, 0, 0, 0.25);
         font-weight: 400;
         b {
@@ -90,7 +93,7 @@
 }
 .post-metadata {
     font-size: 0.8em;
-    .comments {
+    .icon-comment {
         float: left;
     }
     .links {
@@ -109,7 +112,6 @@
     padding: 0.2em 0.2em;
     font-size: 1rem;
     text-align: center;
-    color: #896252;
     .prev {
         float: left;
     }
@@ -118,8 +120,100 @@
     }
 }
 
-/* contact page */
-// TODO
+/* comments */
+.comments {
+    h1 {
+        font-size: 1.375rem;
+        line-height: 1.2em;
+        font-family: $headingFont;
+        font-weight: 400;
+        margin-top: 0.5em;
+    }
+}
+.comment-list {
+    list-style-type: none;
+    margin-bottom: 1rem;
+    li {
+        border-top: 0.0625rem solid rgba(255, 255, 255, 0.8);
+        border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.15);
+        font-size: 0.85rem;
+        padding: 0.6em 0 1.2em;
+    }
+    .comment-author {
+        font-weight: bold;
+        font-size: 1em;
+        margin-bottom: 0.375rem;
+    }
+    .icon-comment:before {
+        color: #6B6B5B;
+        margin-right: 0.375rem;
+    }
+    .comment-accept {
+        color: $alertColor;
+    }
+    .comment-text p {
+        margin-bottom: 0;
+    }
+    .comment-time {
+        font-size: 0.8em;
+        color: $highlightColor;
+    }
+}
+.comment-form {
+    margin-top: 2rem;
+    width: 20em;
+    max-width: 100%;
+    h2 {
+        font-size: 1.375rem;
+        line-height: 1.2em;
+        font-family: $headingFont;
+        font-weight: 400;
+        margin-bottom: 0.5em;
+    }
+    label {
+        display: block;
+        i {
+            color: $alertColor;
+            font-size: 0.85em;
+            vertical-align: middle;
+        }
+    }
+}
+input, textarea {
+    font-family: $bodyFont;
+    font-size: 0.875rem;
+    color: $txtColor;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.5em 1em;
+    border: 1px solid #CFBEA8;
+    -webkit-box-shadow: $minOnePx $onePx $onePx 0 rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: $minOnePx $onePx $onePx 0 rgba(0, 0, 0, 0.25);
+    box-shadow: $minOnePx $onePx $onePx 0 rgba(0, 0, 0, 0.25);
+}
+button {
+    background-color: #F5F2E5;
+    border: $onePx solid wheat;
+    box-shadow: $minOnePx $onePx $onePx 0 rgba(0, 0, 0, 0.35);
+    padding: 0 $tenPx;
+    line-height: (29/$baseFontSize) + rem;
+    display: block;
+    font-family: $headingFont;
+    font-size: 1.2rem;
+    color: $highlightColor;
+    text-transform: capitalize;
+    letter-spacing: $onePx;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: $onePx  $minOnePx $onePx 0 rgba(0, 0, 0, 0.35);
+    }
+    &:active {
+        box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.6);
+    }
+}
 
 /* display photo */
 .display-photo {
@@ -161,7 +255,7 @@
     padding: 0.5em 0;
 }
 
-/* side bar */
+/*** side bar ***/
 
 /* fb box */
 #fb-box {
@@ -200,7 +294,7 @@
         box-shadow: 0rem 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.25);
         padding: 0.3em 0;
         text-align: center;
-        color: #896252;
+        color: $highlightColor;
     }
 
     li {
@@ -211,7 +305,7 @@
         a {
             display: block;
             padding: 0.3em 0.6875rem;
-            color: #896252;
+            color: $highlightColor;
             &:hover {
                 background-color: #ECEAE6;
                 text-decoration: none;
@@ -219,3 +313,43 @@
         }
     }
 }
+.search-box {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width:100%;
+    padding-left: 2rem;
+    padding-top: 0;
+
+    .icon-feed {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+.search-input {
+    margin-right: 2.4em;
+}
+.search-btn {
+    width: 2.4rem;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    margin: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    &:hover {
+        box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.6);
+    }
+}
+
+
+// TODO
+/* contact page */
+/* elementy posta */
+/* wyniki wyszukiwania */
+/* nadch. koncerty */

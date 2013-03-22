@@ -20,6 +20,19 @@
                 <button type="submit" id="gosearch" class="icon-search search-btn" >szukaj</button>
             </form>
         </div>
+<!-- temporary! -->
+
+    <article class="side-widget upcomming-concerts">
+        <h1>Najbliższe koncerty</h1>
+        <ul>
+            <li class="vevent">
+                <em title="2013-03-19T19:30:00" class="dtstart">19 marca, 19:30</em><br>
+                <strong class="summary">Modlitwa pod Krzyżem</strong><br>
+                <small class="location">Bazylika oo. Franciszkanów, po mszy św. o 19:00</small>
+            </li>
+        </ul>
+    </article>
+<!-- temporary! -->
         <article class="side-widget" id="upcomming-concerts">
           <h1>Najbliższe koncerty</h1>
           <ul>

@@ -327,6 +327,51 @@ img {
   margin-bottom: 3em;
   line-height: 1.4em;
   /* typography */ }
+  .post h1, .post h2, .post h3 {
+    font-family: "Oranienbaum", serif;
+    font-weight: 400;
+    line-height: 1.2em;
+    margin-bottom: 0.6em; }
+  .post h1 {
+    font-size: 1.75rem;
+    margin-top: 1.6em; }
+  .post h2 {
+    font-size: 1.5rem;
+    margin-top: 2em; }
+  .post h3 {
+    font-size: 1.2rem;
+    margin-top: 2em;
+    color: #8B3E1C; }
+  .post h4 {
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+    color: #4B4B3F; }
+  .post h5 {
+    margin-bottom: 0.6em;
+    font-size: 0.875rem; }
+  .post h6 {
+    margin-bottom: 0.6em;
+    font-size: 0.875rem;
+    font-weight: normal; }
+  .post ul, .post ol {
+    list-style-position: outside;
+    margin-bottom: 1em;
+    font-size: 0.875rem;
+    padding-left: 1.4em; }
+  .post ol {
+    list-style-type: decimal; }
+  .post ul {
+    list-style-type: circle; }
+  .post blockquote {
+    background-color: #F5F2E5;
+    box-shadow: 0rem 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.25);
+    padding: 1em 2em;
+    margin-bottom: 1em;
+    color: #815542;
+    font-style: italic;
+    width: 60%; }
+  .post blockquote p:last-child {
+    margin-bottom: 0; }
   .post p {
     margin-bottom: 1em;
     font-size: 0.875rem; }
@@ -352,7 +397,8 @@ img {
     font-size: 1.75rem;
     line-height: 1.2em;
     font-family: "Oranienbaum", serif;
-    font-weight: 400; }
+    font-weight: 400;
+    margin: 0; }
   .post-title .tags {
     font-size: 0.75em;
     margin-bottom: 0; }
@@ -609,10 +655,28 @@ button {
   .search-btn:hover {
     box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.6); }
 
+.upcomming-concerts h1 {
+  margin-bottom: 0; }
+.upcomming-concerts li {
+  padding: 1em 0;
+  text-align: center; }
+.upcomming-concerts em {
+  font-size: 1rem;
+  color: #368aad;
+  font-style: normal; }
+.upcomming-concerts small {
+  font-size: 0.825rem; }
+.upcomming-concerts strong {
+  font-weight: normal;
+  font-size: 1.75rem;
+  font-family: "Oranienbaum", serif;
+  font-weight: 400;
+  color: #815542; }
+
 /* contact page */
-/* elementy posta */
 /* wyniki wyszukiwania */
 /* nadch. koncerty */
+/* transitions i transforms dla innych przeglądarek */
 /* default = large screen */
 .page {
   width: 64em;

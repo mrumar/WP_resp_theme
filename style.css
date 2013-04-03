@@ -317,11 +317,21 @@ img {
 
   .transforms3d .main-menu .list {
     -webkit-transform: translate3d(70%, 0, 0) scale3d(0.9, 0.9, 0.9);
+    -ms-transform: translate3d(70%, 0, 0) scale3d(0.9, 0.9, 0.9);
+    -moz-transform: translate3d(70%, 0, 0) scale3d(0.9, 0.9, 0.9);
+    transform: translate3d(70%, 0, 0) scale3d(0.9, 0.9, 0.9);
     -webkit-transition: -webkit-transform 300ms ease-out;
-    -webkit-transform-origin: 50% 0; }
+    transition: transform 300ms ease-out;
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0; }
 
   .transforms3d.is-nav .main-menu .list {
-    -webkit-transform: translate3d(0, 0, 0); } }
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
 /* post */
 .post {
   margin-bottom: 3em;
@@ -549,7 +559,10 @@ button {
   -webkit-box-shadow: 0 0.0625rem 7px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 0.0625rem 7px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0.0625rem 7px rgba(0, 0, 0, 0.2);
-  -webkit-transform: rotate(5deg); }
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg); }
   .display-photo:after {
     content: "";
     position: absolute;
@@ -619,7 +632,12 @@ button {
     .widget li a {
       display: block;
       padding: 0.3em 0.6875rem;
-      color: #815542; }
+      color: #815542;
+      -webkit-transition: background-color 300ms ease-in;
+      -moz-transition: background-color 300ms ease-in;
+      -ms-transition: background-color 300ms ease-in;
+      -o-transition: background-color 300ms ease-in;
+      transition: background-color 300ms ease-in; }
       .side-widget li a:hover,
       .widget li a:hover {
         background-color: #ECEAE6;
@@ -674,9 +692,9 @@ button {
   color: #815542; }
 
 /* contact page */
-/* wyniki wyszukiwania */
-/* nadch. koncerty */
-/* transitions i transforms dla innych przeglądarek */
+.vcard {
+  margin-bottom: 2em; }
+
 /* default = large screen */
 .page {
   width: 64em;

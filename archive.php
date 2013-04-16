@@ -1,41 +1,37 @@
 <?php get_header(); ?>
 
-	<div id="content" class="narrowcolumn">
-
 		<?php if (have_posts()) : ?>
 
 		<?php while (have_posts()) : the_post(); ?>
 
-			<div class="post" id="post-<?php the_ID(); ?>">
-                <div class="post-top">
-                    <div class="post-title">
-                    	<h4><b><?php pl_date() ?></b></h4>
-                    	<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php if ( function_exists('the_title_attribute')) the_title_attribute(); else the_title(); ?>"><?php the_title(); ?></a></h2>
-                        <?php if ( function_exists('the_tags')) the_tags('<h3 class="tags"><span>Tagi: </span>', ', ', ' </h3>'); ?>
-                       
-                    </div>
+            <article class="post" id="post-<?php the_ID(); ?>">
+                <header class="post-title">
+                    <time><b class="day"><?php the_time('d') ?></b><b class="month"><?php the_time('M') ?></b><span class="year"><?php the_time('Y') ?></span></time>
+                    <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php if ( function_exists('the_title_attribute')) the_title_attribute(); else the_title(); ?>"><?php the_title(); ?></a></h1>
+                    <?php if ( function_exists('the_tags')) the_tags('<p class="tags"><span>Tagi : </span>', ', ', ' </p>'); ?>
+                </header>
+
+                <div class="entry clear">
+                    <?php the_content('Zobacz cały wpis &raquo;'); ?>
                 </div>
 
-				<div class="entry clear">
-					<?php the_content('',FALSE,''); ?>
-				</div>
-
-                <div class="postmetadata">
-                	  <div class="alignleft">
-                    	<?php comments_popup_link('Brak komentarzy', 'Komentarzy: <span>(1)</span>', 'Komentarzy: <span>(%)</span>'); ?>
+                <footer class="post-metadata clear">
+                    <p class="result-info">Kategoria: <?php the_category(', ') ?></p>
+                    <div class="icon-comment">
+                        <?php comments_popup_link('Brak komentarzy', 'Komentarzy: <span>(1)</span>', 'Komentarzy: <span>(%)</span>'); ?>
                     </div>
-                    <div class="alignright">
+                    <div class="links icon-arrow-right">
                         <a class="readmore" href="<?php the_permalink() ?>" >Czytaj dalej</a><?php edit_post_link('Edytuj', '  ', ''); ?>
                     </div>
-                </div>
-			</div>
+                </footer>
+            </article>
 
 		<?php endwhile; ?>
 
-		<div class="navigation">
-			<div class="alignleft"><?php next_posts_link('&laquo; Starsze wpisy') ?></div>
-			<div class="alignright"><?php previous_posts_link('Nowsze wpisy &raquo;') ?></div>
-		</div>
+        <nav class="other-posts-links clear">
+            <span class="prev"><?php next_posts_link('&laquo; Starsze wpisy') ?></span>
+            <span class="next"><?php previous_posts_link('Nowsze wpisy &raquo;') ?></span>
+        </nav>
 
 	<?php else : ?>
 
@@ -43,7 +39,5 @@
 		<?php include (TEMPLATEPATH . '/searchform.php'); ?>
 
 	<?php endif; ?>
-
-	</div>
 
 <?php get_footer(); ?>

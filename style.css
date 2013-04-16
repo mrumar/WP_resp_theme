@@ -232,6 +232,8 @@ img {
     opacity: 1; }
   .main-menu li:hover .items-5, .main-menu li.ext .items-5 {
     height: 9rem; }
+  .main-menu li:hover .items-4, .main-menu li.ext .items-4 {
+    height: 7.25rem; }
   .main-menu li:hover .items-3, .main-menu li.ext .items-3 {
     height: 5.375rem; }
   .main-menu li:hover .items-2, .main-menu li.ext .items-2 {

@@ -38,7 +38,7 @@ if (!is_user_logged_in()) {
         <ul class="list">
          <li class="active"><a class="f-level" href="/">strona główna</a></li>
          <li><a class="f-level" href="/o-nas/">o nas</a>
-             <ul class="items-5">
+             <ul class="items-4">
                 <li><a href="/o-nas/">O nas</a></li>
                 <li><a href="/sklad-osobowy/">Skład osobowy</a></li>
                 <li><a href="/kronika/">Kronika</a></li>

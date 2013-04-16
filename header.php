@@ -42,7 +42,7 @@ if (!is_user_logged_in()) {
                 <li><a href="/o-nas/">O nas</a></li>
                 <li><a href="/sklad-osobowy/">Skład osobowy</a></li>
                 <li><a href="/kronika/">Kronika</a></li>
-                <li><a href="/kalendarium">Kalendarium</a></li>
+                <!--<li><a href="/kalendarium">Kalendarium</a></li>-->
                 <li><a href="/kontakt/">Kontakt</a></li>
              </ul>
          </li>

@@ -413,9 +413,11 @@ button {
         font-size: 1rem;
         color: $linkColor;
         font-style: normal;
+        display: block;
     }
     small {
         font-size: 0.825rem;
+        display: block;
     }
     strong {
         font-weight: normal;
@@ -423,6 +425,12 @@ button {
         font-family: $headingFont;
         font-weight: 400;
         color: $highlightColor;
+        display: block;
+        margin: 0.3rem 0;
+    }
+    .no-items {
+        margin: 1rem 0;
+        text-align: center;
     }
 }
 

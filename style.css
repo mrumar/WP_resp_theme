@@ -683,15 +683,22 @@ button {
 .upcomming-concerts em {
   font-size: 1rem;
   color: #368aad;
-  font-style: normal; }
+  font-style: normal;
+  display: block; }
 .upcomming-concerts small {
-  font-size: 0.825rem; }
+  font-size: 0.825rem;
+  display: block; }
 .upcomming-concerts strong {
   font-weight: normal;
   font-size: 1.75rem;
   font-family: "Oranienbaum", serif;
   font-weight: 400;
-  color: #815542; }
+  color: #815542;
+  display: block;
+  margin: 0.3rem 0; }
+.upcomming-concerts .no-items {
+  margin: 1rem 0;
+  text-align: center; }
 
 /* contact page */
 .vcard {

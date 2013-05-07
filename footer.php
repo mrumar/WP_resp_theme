@@ -20,7 +20,7 @@
                 <button type="submit" id="gosearch" class="icon-search search-btn" >szukaj</button>
             </form>
         </div>
-        <article class="side-widget" id="upcomming-concerts">
+        <article class="side-widget upcomming-concerts" id="upcomming-concerts">
           <h1>Najbliższe koncerty</h1>
           <ul>
               <?php
@@ -36,8 +36,8 @@
                                           {
                                             ?>
                                             <li class="vevent">
-                                              <em title="<?=$concert->data_koncertu.'T'.$concert->godzina;?>" class="dtstart"><?=pl_time2string2($concert->data_koncertu,$concert->godzina);?></em><br />
-                                              <strong class="summary"><?=$concert->nazwa;?></strong><br />
+                                              <em title="<?=$concert->data_koncertu.'T'.$concert->godzina;?>" class="dtstart"><?=pl_time2string2($concert->data_koncertu,$concert->godzina);?></em>
+                                              <strong class="summary"><?=$concert->nazwa;?></strong>
                                               <small class="location"><?=$concert->miejsce;?></small>
                                             </li>
                                             <?
@@ -45,7 +45,9 @@
                                       }
                                       else
                                       {
-                                          echo 'Informacje wkrótce';
+                                          ?>
+                                          <small class="no-items">Informacje wkrótce</small>
+                                          <?
                                       }
               ?>
             </ul>

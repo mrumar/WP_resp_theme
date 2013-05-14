@@ -27,11 +27,15 @@
             </article>
 
 		<?php endwhile; ?>
+            
+        <?php if (get_next_posts_link() || get_previous_posts_link()) { ?>
 
         <nav class="other-posts-links clear">
             <span class="prev"><?php next_posts_link('&laquo; Starsze wpisy') ?></span>
             <span class="next"><?php previous_posts_link('Nowsze wpisy &raquo;') ?></span>
         </nav>
+        
+        <?php } ?>
 
 	<?php else : ?>
 

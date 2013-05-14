@@ -19,12 +19,12 @@ ul {
   list-style: none; }
 
 /* for win8 mobile */
-@-ms-viewport {
-  width: device-width; }
-
-@viewport {
-  width: device-width; }
-
+/*@-ms-viewport {
+  width: device-width;
+}*/
+/*@viewport {
+  width: device-width;
+}*/
 /* vars */
 /* mixins */
 /* typography */

@@ -75,6 +75,7 @@
     <div>
         <a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a> &copy; All Rights Reserved. 
         <a href="/kontakt/">Kontakt</a>
+        <a href="/wp-admin" title="Zaloguj się do panelu edycji">Logowanie</a>
     </div>
 </div>
 
@@ -82,7 +83,6 @@
 </div> <!-- end of div.page -->
 
     <?php wp_footer(); ?>
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/jquery-1.9.0.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/va.js"></script>
     <script type="text/javascript">
         var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

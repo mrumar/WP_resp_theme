@@ -94,5 +94,6 @@
         pageTracker._trackPageview();
         } catch(err) {}
     </script>
+    <!-- jestem na nowym serwerze tralalala -->
 </body>
 </html>

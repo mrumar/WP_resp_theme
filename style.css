@@ -704,6 +704,22 @@ button {
 .vcard {
   margin-bottom: 2em; }
 
+/* ovveride picasa-image-express plugin styles */
+.post .pie-img-wrapper {
+  margin-bottom: 0;
+  padding: 0 0.3em 0.6em; }
+  .post .pie-img-wrapper a {
+    display: block;
+    width: 100%;
+    text-align: center; }
+    .post .pie-img-wrapper a:hover img {
+      -webkit-filter: brightness(130%); }
+
+.pie-item {
+  box-sizing: border-box;
+  width: 32%;
+  margin: 0 !important; }
+
 /* default = large screen */
 .page {
   width: 64em;

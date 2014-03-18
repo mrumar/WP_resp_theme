@@ -21,7 +21,7 @@
             </form>
         </div>
         <a class="big-banner-btn" href="/2014/03/17/milosc-ponad-wszystko-nuty-i-muzyka-do-pobrania/" title="Wszystko na temat utworu ekspiacyjnego Miłość ponad wszystko">
-            <img src="http://voceangeli.pl/files/Milosc_ponad_wszystko/milosc-baner-m.png" alt="Banner Miłość ponad wsyzstko - modlitwa przebłagalna i wynagradzająca" />
+            <img src="/files/Milosc_ponad_wszystko/milosc-baner-m.png" alt="Banner Miłość ponad wsyzstko - modlitwa przebłagalna i wynagradzająca" />
             <p>informacje&nbsp;&bull;&nbsp;nagrania&nbsp;&bull;&nbsp;nuty</p>
         </a>
         <article class="side-widget upcomming-concerts" id="upcomming-concerts">

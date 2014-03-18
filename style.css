@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*
+/*!
  Theme Name: VA responsive
  Based on: BlueGrey from AskGraphics.com
  Version: 1.0
@@ -389,10 +389,10 @@ img {
     font-size: 0.875rem; }
   .post .alignright {
     float: right;
-    margin-left: 0.5em; }
+    margin-left: 1em; }
   .post .alignleft {
     float: left;
-    margin-right: 0.5em; }
+    margin-right: 1em; }
   .post .wp-caption-text {
     font-size: 0.8em;
     font-style: italic;
@@ -526,7 +526,7 @@ input, textarea {
   box-sizing: border-box;
   width: 100%;
   padding: 0.5em 1em;
-  border: 1px solid #cfbea8;
+  border: 1px solid #CFBEA8;
   -webkit-box-shadow: -0.0625rem 0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.25);
   -moz-box-shadow: -0.0625rem 0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.25);
   box-shadow: -0.0625rem 0.0625rem 0.0625rem 0 rgba(0, 0, 0, 0.25); }
@@ -700,6 +700,21 @@ button {
   margin: 1rem 0;
   text-align: center; }
 
+.big-banner-btn {
+  color: #000;
+  display: block; }
+  .big-banner-btn:hover {
+    text-decoration: none;
+    background-color: #000;
+    color: #fff; }
+  .big-banner-btn p {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin-bottom: 1em; }
+
 /* contact page */
 .vcard {
   margin-bottom: 2em; }
@@ -730,7 +745,7 @@ button {
 
 .body {
   background-color: #FFF;
-  border: 2px solid #94d3de; }
+  border: 2px solid #94D3DE; }
 
 .main-content {
   width: 54%;
